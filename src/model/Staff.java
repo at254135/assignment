@@ -1,24 +1,24 @@
 package model;
 
 public abstract class Staff {
-    protected int id;
+    protected int staffId;
     protected String name;
     protected int age;
     protected double salary;
 
     public Staff(int id, String name, int age, double salary) {
-        setId(id);
+        setStaffId(id);
         setName(name);
         setAge(age);
         setSalary(salary);
     }
 
-    public void setId(int id) {
+    public void setStaffId(int id) {
         if (id <= 0) {
             throw new IllegalArgumentException(
-                    "(Staff): positive non-zero id expected, got " + this.id);
+                    "(Staff): positive non-zero id expected, got " + this.staffId);
         }
-        this.id = id;
+        this.staffId = id;
     }
 
     public void setAge(int age) {
@@ -52,14 +52,14 @@ public abstract class Staff {
     public abstract void work();
     public abstract String getRole();
 
-    public int getId() { return id; }
+    public int getStaffId() { return staffId; }
     public String getName() { return name; }
     public int getAge() { return age; }
     public double getSalary() { return salary; }
 
     @Override
     public String toString() {
-        return "[" + getRole() + "] " + name + "@" + id + "\n" +
+        return "[" + getRole() + "] " + name + "@" + staffId + "\n" +
                 "age: " + age + ", salary: " + salary;
     }
 }

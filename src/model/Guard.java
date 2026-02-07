@@ -16,6 +16,10 @@ public class Guard extends Staff {
         this.equipment = equipment;
     }
 
+    public String getEquipment() {
+        return equipment;
+    }
+
     @Override
     public void work() {
         System.out.println("Guard " + name + " protects the market with " + equipment);

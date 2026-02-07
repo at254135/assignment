@@ -24,6 +24,10 @@ public class Cashier extends Staff {
         return charisma >= 70;
     }
 
+    public int getCharisma() {
+        return charisma;
+    }
+
     @Override
     public void work() {
         System.out.println("Cashier " + name + " serves buyers.");
